@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Internal stylesheet - requires style-src 'unsafe-inline' -->
+  <style type="text/css">
+    .background {
+      fill: #f0f0f0;
+    }
+    
+    .title-text {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      fill: #333;
+    }
+    
+    .status-box {
+      stroke: #333;
+      stroke-width: 2;
+    }
+    
+    .success {
+      fill: #4CAF50;
+    }
+    
+    .error {
+      fill: #f44336;
+    }
+    
+    .info-text {
+      font-family: monospace;
+      font-size: 12px;
+      fill: white;
+    }
+    
+    .pulsing {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+  </style>
+  
+  <!-- Background -->
+  <rect class="background" width="400" height="300" />
+  
+  <!-- Title -->
+  <text class="title-text" x="200" y="40" text-anchor="middle">
+    CSP Test SVG
+  </text>
+  
+  <!-- Success box (should be green) -->
+  <rect class="status-box success" x="50" y="80" width="140" height="80" rx="5" />
+  <text class="info-text" x="120" y="115" text-anchor="middle">Styles Loaded!</text>
+  <text class="info-text" x="120" y="135" text-anchor="middle">This is GREEN</text>
+  
+  <!-- Error box (should be red) -->
+  <rect class="status-box error" x="210" y="80" width="140" height="80" rx="5" />
+  <text class="info-text" x="280" y="115" text-anchor="middle">Styles Loaded!</text>
+  <text class="info-text" x="280" y="135" text-anchor="middle">This is RED</text>
+  
+  <!-- Pulsing element -->
+  <circle class="pulsing success" cx="200" cy="220" r="30" />
+  <text class="info-text" x="200" y="227" text-anchor="middle">Pulsing</text>
+  
+  <!-- Inline style element - also requires unsafe-inline -->
+  <rect x="50" y="260" width="300" height="30" style="fill: #2196F3; stroke: #0D47A1; stroke-width: 2;" />
+  <text x="200" y="280" text-anchor="middle" style="fill: white; font-size: 14px; font-weight: bold;">
+    Inline Styled Element
+  </text>
+</svg>
